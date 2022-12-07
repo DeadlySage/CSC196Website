@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			function saveValuesToLocal()
+			{
+				localStorage._name = document.getElementById("name").value;
+				localStorage._age = document.getElementById("age").value.toString();
+			}
+
+			function loadValuesToLocal()
+			{
+				document.getElementById("name").value = localStorage._name;
+				document.getElementById("age").value = localStorage._age;
+			}
+		</script>
+	</head>
+	
+	<body>
+		Name: <input type="text" id="name">
+		Age: <input type="text" id="age">
+		<button onclick="saveValuesToLocal()">Save</button>
+		<button onclick="loadValuesToLocal()">Load</button>
+		<p id="out"></p>
+	</body>
+</html>
